@@ -1,14 +1,26 @@
 #include "Dustbin.h"
-#include <iostream>>
+#include <iostream>
 using namespace std;
 
-void Dustbin::setGarbage(Garbage obj, int n)
+void Dustbin::throwOutGarbage(Garbage obj)
 {
-	Dustbin :: HouseWasteContent[n] = obj;
+	HouseWasteContent.push_back(obj);
 }
-/*
-void Dustbin::getGarbage(Garbage HouseWasteContent, int n)
+
+void Dustbin::throwOutPaperGarbage(PaperGarbage obj)
 {
-	cout << "Obiekt " << HouseWasteContent[n];
+	if (obj.squeezed == false) {
+		std::cout << "Error!";
+	}
+	else
+		paperContent.push_back(obj);
 }
-*/
+
+void Dustbin::throwOutPlasticGarbage(PlasticGarbage obj)
+{
+	if (obj.clean == true) {
+		std::cout << "Error!";
+	}
+	else
+		paperContent.push_back(obj);
+}

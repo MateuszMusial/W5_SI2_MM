@@ -10,8 +10,7 @@ private:
 
 public:
 	PlasticGarbage() {
-		std :: string name = " Nowy plastikowy smiec";
-		isClean = 0;
+		isClean = false;
 	}
 	void clean();
 
